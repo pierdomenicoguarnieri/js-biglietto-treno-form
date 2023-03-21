@@ -50,7 +50,7 @@ Steps da seguire:
 
 ## Extra
 
-
+1. Ho aggiunto un overlay al biglietto in quanto esso non è ancora stato acquistato dall'utente. L'overley verrà rimosso una volta effettuato il pagamento ed allo stesso momento verrà generato il codice univoco del biglietto.
 
 ## References
 
