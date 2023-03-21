@@ -79,6 +79,31 @@ footer{
   font-size: 2.5vw;
 }
 
+#col-bg{
+  aspect-ratio: 1/1;
+}
+
+#col-bg::before{
+  content: "";
+  background-image: url(../img/logo-boolean.png);
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+}
+
+.pg-ticket-overlay{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pg-ticket-overlay p{
+  width: 110%;
+  transform: rotate(-2deg);
+}
+
 footer span{
   font-size: calc(.7rem + 0.75vw);
 }
