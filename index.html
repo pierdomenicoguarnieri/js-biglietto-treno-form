@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous'/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>BoolTransport</title>
+  </head>
+  <body>
+    <header class="bg-primary d-flex align-items-center">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand fs-2 text-white" href="#home">BoolTransport</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse text-end d-lg-flex justify-content-lg-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#how-it-works">How it works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#pricing">Pricing</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#partners">Partners</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="overflow-auto">
+      <section id="home">
+        <div class="pg-images-container position-relative w-100">
+          <img id="train-1" class="w-100 position-absolute" src="assets/img/train-station-1.webp" alt="">
+          <img id="train-2" class="w-100 position-absolute" src="assets/img/train-station-2.jpg" alt="">
+          <img id="train-3" class="w-100 position-absolute" src="assets/img/train-station-3.png" alt="">
+          <div class="pg-overlay position-absolute w-100 d-flex flex-column align-items-center justify-content-center text-white">
+            <h1>BoolTransport</h1>
+            <h2>Easy travel, easy pricing.</h2>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works">
+        <div class="container pt-5">
+          <div class="row flex-wrap">
+            <h2 class="fs-1 pb-5 text-center">How it works</h2>
+            <div class="col-md-4 px-3 pb-4">
+              <h3 class="fs-2">Il nostro algoritmo</h3>
+              <p>
+                Il nostro sito si basa su un elaborato algoritmo sviluppato nel corso di oltre 10 anni. Il suo sviluppo è stato curato dai migliori programmatori al mondo e verificato nella sua correttezza dai più grandi luminari della matematica. Ma in pratica quali sono i vantaggi del nostro algoritmo? I vantaggi sono sostanzialmente 3: 
+              </p>
+
+              <ul>
+                <li>Algoritmo non mutevole</li>
+                <li>Prezzo al chilometro fisso</li>
+                <li>Sconti per alcune categorie</li>
+              </ul>
+            </div>
+
+            <div class="col-md-4 px-3 pb-4">
+              <h3 class="fs-2">Prezzo al chilometro</h3>
+              <p>
+                Grazie alle nostre svariate convenzioni con i vari gestori di linea, siamo riusciti ad ottenere un blocco del prezzo al singolo chilometro; infatti utilizzando il nostro sito sarà possibile acquistare un biglietto avente il chilometraggio desiderato al prezzo di <span class="fw-bold">0.21€/km</span>
+              </p>
+            </div>
+
+            <div class="col-md-4 px-3 pb-4">
+              <h3 class="fs-2">I nostri sconti</h3>
+              <p>
+                Per alcune categorie sono presenti degli sconti fissi, non mutevoli in nessun caso. Gli sconti sono i seguenti:
+              </p>
+
+              <ul>
+                <li>Sconto per gli <span class="fw-bold">under 18</span>: 20% sul prezzo intero del biglietto</li>
+                <li>Sconto per gli <span class="fw-bold">over 65</span>: 40% sul prezzo intero del biglietto</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="bg-light-subtle">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col text-center">
+              <h2 class="fs-1">Calcolatore del prezzo</h2>
+              <div id="content" class="d-flex flex-column"></div>
+              <button type="button" class="btn btn-outline-success mb-5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" href="pricing">Acquista</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="partners" class="text-center py-5">
+        <div class="container">
+          <h2 class="fs-1">I nostri partner</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-75" src="assets/img/logo-italo.jpg" alt=".Italo" title=".Italo">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-75" src="assets/img/logo-ferrovie-dello-stato.png" alt="Ferrovie dello Stato Italiane" title="Ferrovie dello Stato Italiane">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-75" src="assets/img/logo-frecciarossa.png" alt="Frecciarossa" title="Frecciarossa">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-sncf.png" alt="SNCF" title="SNCF">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-ouigo.png" alt="Ouigo" title="Ouigo">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-db.png" alt="Deutsche Bahn" title="Deutsche Bahn">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-flixtrain.png" alt="Flix Train" title="Flix Train">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-sbb.png" alt="SBB" title="SBB">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-obb.png" alt="ÖBB" title="ÖBB">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-westbahn.svg" alt="West Bahn" title="West Bahn">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-iryo.png" alt="Iryo" title="Iryo">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-renfe.png" alt="Renfe" title="Renfe">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-dsb.png" alt="DSB" title="DSB">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-snbc.png" alt="SNBC" title="SNBC">
+            </div>
+
+            <div class="col d-flex align-items-center justify-content-center pb-4">
+              <img class="w-50" src="assets/img/logo-boolean.png" alt="Boolean" title="Boolean">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark">
+      <div class="container h-100">
+        <div class="row h-100 d-flex align-items-center">
+          <div class="col-3">
+            <select class="form-select bg-transparent border-0 text-white" aria-label="Default select example" placeholder="Seleziona la lingua...">
+              <option>Italiano</option>
+              <option>Inglese</option>
+              <option>Francese</option>
+              <option>Spagnolo</option>
+              <option>Tedesco</option>
+            </select>
+          </div>
+
+          <div class="col-6 d-flex justify-content-center">
+            <span class="text-white text-center">Made with &hearts; by Pierdomenico Guarnieri</span>
+          </div>
+
+          <div class="col-3 h-100">
+            <nav class="h-100">
+              <ul class="list-unstyled h-100 d-flex align-items-center justify-content-end m-0">
+                <li class="px-2">
+                  <a class="text-white" href="https://github.com/pierdomenicoguarnieri" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </li>
+                
+                <li class="px-2">
+                  <a class="text-white" href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                
+                <li class="px-2">
+                  <a class="text-white" href="#">
+                    <i class="fa-solid fa-globe"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Inserisci i dati di pagamento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-6">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" placeholder="Mario" required>
+            <div class="valid-feedback">
+              Ok!
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="surname" class="form-label">Cognome</label>
+            <input type="text" class="form-control" id="surname" placeholder="Rossi" required>
+            <div class="valid-feedback">
+              Ok!
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="city" class="form-label">Città</label>
+            <input type="text" class="form-control" id="city" required>
+            <div class="invalid-feedback">
+              Inserisci una città valida.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="state" class="form-label">Stato</label>
+            <select class="form-select" id="state" required>
+              <option selected disabled value="">Scegli...</option>
+              <option>Italia</option>
+              <option>Svizzera</option>
+              <option>Francia</option>
+              <option>Germania</option>
+              <option>Austria</option>
+              <option>Spagna</option>
+              <option>Belgio</option>
+              <option>Olanda</option>
+              <option>Lussemburgo</option>
+            </select>
+            <div class="invalid-feedback">
+              Seleziona uno stato valido.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="cap" class="form-label">CAP</label>
+            <input type="text" class="form-control" id="cap" required>
+            <div class="invalid-feedback">
+              Inserisci un CAP valido.
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="creditCard" class="form-label">Numero della carta di credito</label>
+            <input type="text" class="form-control" id="creditCard" required>
+            <div class="invalid-feedback">
+              Inserisci una carta di credito valida.
+            </div>
+          </div>
+          <div class="pg-payment-details d-flex flex-column flex-md-row">
+            <div class="col col-md-8">
+              <label for="expiry" class="form-label">Data di scadenza</label>
+              <div id="expiry" class="d-flex">
+                <input type="text" class="form-control w-50 me-1 me-md-3" placeholder="MM" required>
+                <input type="text" class="form-control w-50 me-0 me-md-3" placeholder="YYYY" required>
+              </div>
+              <div class="invalid-feedback">
+                Data di scadenza non valida.
+              </div>     
+            </div>
+            <div class="col col-md-4">
+              <label for="cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cvv" placeholder="123" required>
+              <div class="invalid-feedback">
+                Inserisci un CVV valido.
+              </div>
+            </div>
+          </div>
+          <div id="outputOffcanvas"></div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Accetta i termini e le condizioni.
+              </label>
+              <div class="invalid-feedback">
+                Devi accettare le condizioni prima di pagare.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Paga</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

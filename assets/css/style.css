@@ -1,0 +1,92 @@
+header{
+  min-height: 80px;
+}
+
+main{
+  height: calc(100vh - 130px);
+}
+
+footer{
+  height: 50px;
+}
+
+.navbar-toggler-icon{
+  filter: invert(100%); 
+}
+
+#home{
+  aspect-ratio: 16/8;
+}
+
+#home .pg-images-container img{
+  object-fit: cover;
+  aspect-ratio: 16/8;
+}
+
+#train-1{
+  z-index: 2;
+  animation-name: fade;
+  animation-delay: 5s;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+}
+
+#train-2{
+  z-index: 1;
+  animation-name: fade;
+  animation-delay: 20s;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+}
+
+#train-3{
+  z-index: 0;
+  animation-name: fade;
+  animation-delay: 35s;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade{
+  0%{
+    opacity: 1;
+  }
+  22.22%{
+    opacity: 1;
+  }
+  33.33%{
+    opacity: 0;
+  }
+  88.88%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.pg-overlay{
+  z-index: 4;
+  aspect-ratio: 16/8;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pg-overlay h1{
+  font-size: 7vw;
+}
+
+.pg-overlay h2{
+  font-size: 2.5vw;
+}
+
+footer span{
+  font-size: calc(.7rem + 0.75vw);
+}
+
+footer a{
+  font-size: calc(.7rem + 0.75vw);
+}
+
+.offcanvas {
+  --bs-offcanvas-width: 40%;
+}
