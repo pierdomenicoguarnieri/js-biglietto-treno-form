@@ -54,3 +54,8 @@ Steps da seguire:
 
 ## References
 
+[W3Schools Input Type](https://www.w3schools.com/html/html_form_input_types.asp)
+
+[Coder Coder! Background Image Opacity](https://coder-coder.com/background-image-opacity/)
+
+[W3Schools JavaScript Random](https://www.w3schools.com/js/js_random.asp)
