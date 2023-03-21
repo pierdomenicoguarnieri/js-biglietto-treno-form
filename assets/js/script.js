@@ -24,6 +24,9 @@ const outputCost = document.getElementById("jsCost");
 
 const ticketShow = document.querySelector(".pg-ticket-container");
 
+const removeFacSimile = document.querySelector(".pg-ticket-overlay");
+
+
 generate.addEventListener("click", function(){
 
   const priceRegular = ((km.value) * 0.21);
@@ -32,7 +35,6 @@ generate.addEventListener("click", function(){
 
   const priceOver65 = priceRegular * (1- (40/100));
 
-console.log(priceRegular);
 
   if((age.value) == 2){
 
@@ -94,4 +96,10 @@ console.log(priceRegular);
 
 cancel.addEventListener("click", function(){
   ticketShow.classList.add("d-none");
+})
+
+pay.addEventListener("click", function(){
+  removeFacSimile.classList.add("d-none");
+
+  outputTicketCode.innerHTML = Math.floor(Math.random() * 100000) + 1;
 })
