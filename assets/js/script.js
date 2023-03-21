@@ -96,6 +96,8 @@ generate.addEventListener("click", function(){
 
 cancel.addEventListener("click", function(){
   ticketShow.classList.add("d-none");
+
+  removeFacSimile.classList.remove("d-none");
 })
 
 pay.addEventListener("click", function(){
