@@ -1,5 +1,9 @@
 const generate = document.getElementById("generate");
 
+const remove = document.getElementById("cancel");
+
+const pay = document.getElementById("pay");
+
 const name = document.getElementById("name");
 
 const km = document.getElementById("km");
@@ -17,6 +21,8 @@ const outputCarriage = document.getElementById("jsCarriage");
 const outputTicketCode = document.getElementById("jsTicketCode");
 
 const outputCost = document.getElementById("jsCost");
+
+const ticketShow = document.querySelector(".pg-ticket-container");
 
 generate.addEventListener("click", function(){
 
@@ -43,6 +49,8 @@ console.log(priceRegular);
     outputOffcanvas.innerHTML = `
     <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceUnderage.toFixed(2)}€</span>.</span>
     `
+
+    ticketShow.classList.remove("d-none");
   }else if((age.value) == 3){
 
     outputName.innerHTML = name.value;
@@ -58,6 +66,8 @@ console.log(priceRegular);
     outputOffcanvas.innerHTML = `
     <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceOver65.toFixed(2)}€</span>.</span>
     `
+
+    ticketShow.classList.remove("d-none");
   }else{
 
     outputName.innerHTML = name.value;
@@ -73,9 +83,15 @@ console.log(priceRegular);
     outputOffcanvas.innerHTML = `
     <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceRegular.toFixed(2)}€</span>.</span>
     `
+
+    ticketShow.classList.remove("d-none");
   }
 
   name.value = "";
   km.value = "";
   age.value = "1";
+})
+
+cancel.addEventListener("click", function(){
+  ticketShow.classList.add("d-none");
 })
