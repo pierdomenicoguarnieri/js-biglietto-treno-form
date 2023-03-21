@@ -98,6 +98,35 @@
           <div class="row">
             <div class="col text-center">
               <h2 class="fs-1">Calcolatore del prezzo</h2>
+              <div class="pg-form-container bg-light-subtle rounded-4 shadow">
+                <div class="row d-flex justify-content-center py-5">
+                  <div class="col-3 px-3">
+                    <label for="name" class="pb-3">Nome e Cognome</label>
+                    <input class="form-control border-primary" id="name" type="text" placeholder="Mario Rossi" value="" required>
+                  </div>
+
+                  <div class="col-3 px-3">
+                    <label for="km" class="pb-3">Chilometri da percorrere</label>
+                    <input class="form-control border-primary" id="km" type="number" placeholder="200" value="" required>
+                  </div>
+
+                  <div class="col-3 px-3">
+                    <label for="ageRange" class="pb-3">Fascia d'età</label>
+                    <select class="form-select border-primary" id="ageRange">
+                      <option selected value="1">Maggiorenne (18-64)</option>
+                      <option value="2">Minorenne (-18)</option>
+                      <option value="3">Over 65 (65+)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="pg-btn-container pb-5">
+                    <button id="generate" class="btn btn-primary me-3">Genera</button>
+                    <button id="cancel" class="btn btn-warning">Annulla</button>
+                  </div>
+                </div>
+              </div>
               <div id="content" class="d-flex flex-column"></div>
               <button type="button" class="btn btn-outline-success mb-5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" href="pricing">Acquista</button>
             </div>
