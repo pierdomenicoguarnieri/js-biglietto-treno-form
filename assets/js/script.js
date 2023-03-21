@@ -45,7 +45,7 @@ generate.addEventListener("click", function(){
     outputCarriage.innerHTML = Math.floor(Math.random( ) * 10) + 1;
 
     outputCost.innerHTML =`
-    ${priceUnderage.toFixed(2)} &euro;
+    <span class="text-decoration-line-through">${priceRegular.toFixed(2)} &euro;</span> ${priceUnderage.toFixed(2)} &euro;
     `
 
     outputOffcanvas.innerHTML = `
@@ -62,7 +62,7 @@ generate.addEventListener("click", function(){
     outputCarriage.innerHTML = Math.floor(Math.random( ) * 10) + 1;
 
     outputCost.innerHTML = `
-    ${priceOver65.toFixed(2)} &euro;
+    <span class="text-decoration-line-through">${priceRegular.toFixed(2)} &euro;</span> ${priceOver65.toFixed(2)} &euro;
     `
     
     outputOffcanvas.innerHTML = `
