@@ -4,6 +4,10 @@ const remove = document.getElementById("cancel");
 
 const pay = document.getElementById("pay");
 
+const formContainer = document.querySelector(".pg-form-container");
+
+const buyBtn = document.getElementById("buy");
+
 const name = document.getElementById("name");
 
 const km = document.getElementById("km");
@@ -59,6 +63,10 @@ generate.addEventListener("click", function(){
       `
 
       ticketShow.classList.remove("d-none");
+
+      formContainer.classList.remove("mb-5");
+
+      buyBtn.classList.remove("d-none");
     }else if((age.value) == 3){
 
       outputName.innerHTML = name.value;
@@ -76,6 +84,10 @@ generate.addEventListener("click", function(){
       `
 
       ticketShow.classList.remove("d-none");
+
+      formContainer.classList.remove("mb-5");
+
+      buyBtn.classList.remove("d-none");
     }else{
 
       outputName.innerHTML = name.value;
@@ -93,6 +105,10 @@ generate.addEventListener("click", function(){
       `
 
       ticketShow.classList.remove("d-none");
+
+      formContainer.classList.remove("mb-5");
+
+      buyBtn.classList.remove("d-none");
     }
   }else{
     alert("Inserisci dei dati vaidi.");
@@ -105,6 +121,10 @@ generate.addEventListener("click", function(){
 
 cancel.addEventListener("click", function(){
   ticketShow.classList.add("d-none");
+
+  formContainer.classList.add("mb-5");
+
+  buyBtn.classList.add("d-none");
 
   removeFacSimile.classList.remove("d-none");
 })
