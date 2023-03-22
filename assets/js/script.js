@@ -29,65 +29,75 @@ const removeFacSimile = document.querySelector(".pg-ticket-overlay");
 
 generate.addEventListener("click", function(){
 
+  let validForm = true;
+
   const priceRegular = ((km.value) * 0.21);
 
   const priceUnderage = priceRegular * (1- (20/100));
 
   const priceOver65 = priceRegular * (1- (40/100));
 
+  if((name.value).lenght < 3) validForm = false;
+  
+  if(isNaN(parseInt(km.value))) validForm = false;
 
-  if((age.value) == 2){
+  if(validForm){
+    if((age.value) == 2){
 
-    outputName.innerHTML = name.value;
+      outputName.innerHTML = name.value;
 
-    outputOffert.innerHTML = "Biglietto Junior";
+      outputOffert.innerHTML = "Biglietto Junior";
 
-    outputCarriage.innerHTML = Math.floor(Math.random( ) * 10) + 1;
+      outputCarriage.innerHTML = Math.floor(Math.random( ) * 10) + 1;
 
-    outputCost.innerHTML =`
-    <span class="text-decoration-line-through">${priceRegular.toFixed(2)} &euro;</span> ${priceUnderage.toFixed(2)} &euro;
-    `
+      outputCost.innerHTML =`
+      <span class="text-decoration-line-through">${priceRegular.toFixed(2)} &euro;</span> ${priceUnderage.toFixed(2)} &euro;
+      `
 
-    outputOffcanvas.innerHTML = `
-    <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceUnderage.toFixed(2)}€</span>.</span>
-    `
+      outputOffcanvas.innerHTML = `
+      <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceUnderage.toFixed(2)}€</span>.</span>
+      `
 
-    ticketShow.classList.remove("d-none");
-  }else if((age.value) == 3){
+      ticketShow.classList.remove("d-none");
+    }else if((age.value) == 3){
 
-    outputName.innerHTML = name.value;
+      outputName.innerHTML = name.value;
 
-    outputOffert.innerHTML = "Biglietto Senior";
+      outputOffert.innerHTML = "Biglietto Senior";
 
-    outputCarriage.innerHTML = Math.floor(Math.random( ) * 10) + 1;
+      outputCarriage.innerHTML = Math.floor(Math.random( ) * 10) + 1;
 
-    outputCost.innerHTML = `
-    <span class="text-decoration-line-through">${priceRegular.toFixed(2)} &euro;</span> ${priceOver65.toFixed(2)} &euro;
-    `
-    
-    outputOffcanvas.innerHTML = `
-    <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceOver65.toFixed(2)}€</span>.</span>
-    `
+      outputCost.innerHTML = `
+      <span class="text-decoration-line-through">${priceRegular.toFixed(2)} &euro;</span> ${priceOver65.toFixed(2)} &euro;
+      `
+      
+      outputOffcanvas.innerHTML = `
+      <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceOver65.toFixed(2)}€</span>.</span>
+      `
 
-    ticketShow.classList.remove("d-none");
+      ticketShow.classList.remove("d-none");
+    }else{
+
+      outputName.innerHTML = name.value;
+
+      outputOffert.innerHTML = "Biglietto Standard";
+
+      outputCarriage.innerHTML = Math.floor(Math.random( ) * 10) + 1;
+
+      outputCost.innerHTML =`
+        ${priceRegular.toFixed(2)} &euro;
+      `
+
+      outputOffcanvas.innerHTML = `
+      <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceRegular.toFixed(2)}€</span>.</span>
+      `
+
+      ticketShow.classList.remove("d-none");
+    }
   }else{
-
-    outputName.innerHTML = name.value;
-
-    outputOffert.innerHTML = "Biglietto Standard";
-
-    outputCarriage.innerHTML = Math.floor(Math.random( ) * 10) + 1;
-
-    outputCost.innerHTML =`
-      ${priceRegular.toFixed(2)} &euro;
-    `
-
-    outputOffcanvas.innerHTML = `
-    <span class="py-2">Il totale da pagare è: <span class="fw-semibold">${priceRegular.toFixed(2)}€</span>.</span>
-    `
-
-    ticketShow.classList.remove("d-none");
+    alert("Inserisci dei dati vaidi.");
   }
+  
 
   name.value = "";
   km.value = "";
