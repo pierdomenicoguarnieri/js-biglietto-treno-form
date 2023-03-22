@@ -103,5 +103,5 @@ cancel.addEventListener("click", function(){
 pay.addEventListener("click", function(){
   removeFacSimile.classList.add("d-none");
 
-  outputTicketCode.innerHTML = Math.floor(Math.random() * 100000) + 1;
+  outputTicketCode.innerHTML = Math.floor(Math.random() * (99000 - 10000 +1)) + 10000;
 })
