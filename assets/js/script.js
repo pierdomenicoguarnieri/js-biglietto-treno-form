@@ -97,7 +97,6 @@ generate.addEventListener("click", function(){
   }else{
     alert("Inserisci dei dati vaidi.");
   }
-  
 
   name.value = "";
   km.value = "";
@@ -114,4 +113,7 @@ pay.addEventListener("click", function(){
   removeFacSimile.classList.add("d-none");
 
   outputTicketCode.innerHTML = Math.floor(Math.random() * (99000 - 10000 +1)) + 10000;
+
+  const close = document.querySelector(".btn-close");
+  close.click();
 })
